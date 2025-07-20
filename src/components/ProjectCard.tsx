@@ -47,9 +47,7 @@ const ProjectCard: React.FC<Project> = ({
               onClick={handleFavoriteClick}
               className={`favorite-button ${isFavorite ? 'favorited' : ''}`}
             >
-              <IconContext.Provider value={{ className: 'react-icons' }}>
-                <FaStar />
-              </IconContext.Provider>
+              ★
             </button>
           )}
         </div>
