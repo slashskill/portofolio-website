@@ -1,25 +1,57 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import HeroSection from './components/HeroSection';
+import ProjectsSection from './components/ProjectsSection';
+import DonationSection from './components/DonationSection';
+import Footer from './components/Footer';
+import BackToTopButton from './components/BackToTopButton';
+import Login from './components/Login';
+import Signup from './components/Signup';
+import Profile from './components/Profile';
+import PrivateRoute from './components/PrivateRoute';
+import ProjectDetailPage from './components/ProjectDetailPage';
+import ScrollToTop from './components/ScrollToTop';
+import { ThemeProvider } from './context/ThemeContext';
+import { AuthProvider } from './context/AuthContext';
+import HRDashboard from './components/HRDashboard/HRDashboard';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider>
+      <Router>
+        <AuthProvider>
+          <div className="App">
+            <Navbar />
+            <ScrollToTop />
+            <Routes>
+              <Route path="/" element={
+                <>
+                  <HeroSection />
+                  <ProjectsSection />
+                  <DonationSection />
+                </>
+              } />
+              <Route path="/login" element={<Login />} />
+              <Route path="/signup" element={<Signup />} />
+              <Route path="/profile" element={
+                <PrivateRoute>
+                  <Profile />
+                </PrivateRoute>
+              } />
+              <Route path="/projects/:projectId" element={<ProjectDetailPage />} />
+              <Route path="/hr-dashboard" element={
+                <PrivateRoute>
+                  <HRDashboard />
+                </PrivateRoute>
+              } />
+            </Routes>
+            <Footer />
+            <BackToTopButton />
+          </div>
+        </AuthProvider>
+      </Router>
+    </ThemeProvider>
   );
 }
 

@@ -1,0 +1,115 @@
+.project-detail-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align items to the top */
+  padding: 4rem 2rem;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  min-height: calc(100vh - 150px); /* Adjust based on navbar/footer height */
+}
+
+.project-detail-card {
+  background-color: var(--surface-color, var(--background-color));
+  padding: 2.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 900px; /* Max width for content */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-detail-image {
+  width: 100%;
+  max-height: 400px;
+  object-fit: contain; /* Use contain to show full image */
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.project-detail-content {
+  width: 100%;
+  text-align: left;
+}
+
+.project-detail-title {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--primary-color);
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 2.5rem;
+}
+
+.project-detail-description {
+  color: var(--text-color);
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.project-detail-features h3,
+.project-detail-technologies h3 {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.project-detail-features ul {
+  list-style: disc inside;
+  margin-left: 1rem;
+  margin-bottom: 2rem;
+  color: var(--text-color);
+}
+
+.project-detail-features li {
+  margin-bottom: 0.5rem;
+}
+
+.tech-tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.tech-tag {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  font-size: 0.9rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+}
+
+.project-detail-links {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.project-detail-link,
+.back-to-home-link {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background-color: var(--accent-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.project-detail-link:hover,
+.back-to-home-link:hover {
+  background-color: var(--primary-color);
+}
+
+.back-to-home-link {
+  margin-top: 2rem;
+  background-color: #6c757d; /* A neutral color for back button */
+}
+
+.back-to-home-link:hover {
+  background-color: #5a6268;
+}

@@ -1,0 +1,28 @@
+.footer {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  padding: 2rem;
+  text-align: center;
+}
+
+.footer-links {
+  margin-bottom: 1rem;
+}
+
+.footer-links a {
+  color: var(--background-color);
+  text-decoration: none;
+  margin: 0 1rem;
+  font-family: 'Lato', sans-serif;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: var(--accent-color);
+}
+
+.footer-copyright {
+  font-size: 0.9rem;
+  color: var(--background-color);
+  font-family: 'Lato', sans-serif;
+}

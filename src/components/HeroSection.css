@@ -1,0 +1,56 @@
+.hero-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 2rem;
+  min-height: 80vh; /* Adjust as needed */
+  background-color: var(--background-color);
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 600px;
+  text-align: left;
+  margin-right: 2rem;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: var(--text-color);
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px; /* Optional: for a softer look */
+}
+
+.cta-button {
+  background-color: var(--accent-color);
+  color: var(--background-color);
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: darken(var(--accent-color), 10%); /* This won't work directly in CSS, but indicates intent */
+  opacity: 0.9;
+}

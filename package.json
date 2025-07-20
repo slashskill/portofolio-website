@@ -3,25 +3,39 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/material": "^7.2.0",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^13.5.0",
     "@types/jest": "^27.5.2",
-    "@types/node": "^16.18.126",
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
+    "@types/react-modal-image": "^2.6.4",
+    "@types/react-scroll": "^1.8.10",
+    "firebase": "^9.23.0",
+    "framer-motion": "^12.23.6",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "react-icons": "^5.5.0",
+    "react-loading-skeleton": "^3.5.0",
+    "react-modal-image": "^2.6.0",
+    "react-router-dom": "^6.30.1",
     "react-scripts": "5.0.1",
+    "react-scroll": "^1.9.3",
+    "recharts": "^3.1.0",
     "typescript": "^4.9.5",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "webfontloader": "^1.6.28"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "populate-firebase": "tsc && node scripts/populateFirebase.js"
   },
   "eslintConfig": {
     "extends": [
@@ -40,5 +54,12 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.15",
+    "@types/react-icons": "^2.2.7",
+    "@types/webfontloader": "^1.6.38",
+    "dotenv": "^17.2.0",
+    "ts-node": "^10.9.2"
   }
 }

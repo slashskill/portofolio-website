@@ -1,0 +1,91 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2rem; /* Adjusted padding */
+  background-color: var(--surface-color, var(--background-color)); /* Use surface color in dark mode */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-left .navbar-logo {
+  height: 50px; /* Adjusted logo size */
+  width: auto; /* Maintain aspect ratio */
+  transition: height 0.3s ease-in-out;
+}
+
+/* Invert logo color in dark mode */
+[data-theme='dark'] .navbar-logo {
+  filter: invert(1);
+}
+
+@media (max-width: 768px) {
+  .navbar-left .navbar-logo {
+    height: 40px; /* Adjust for smaller screens */
+  }
+  .nav-links {
+    display: none; /* Hide links on small screens for simplicity, can be replaced with a hamburger menu */
+  }
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1rem; /* Add gap between links */
+}
+
+.nav-links li {
+  margin: 0; /* Remove margin-right */
+  display: flex; /* Use flexbox for vertical alignment */
+  align-items: center; /* Center items vertically */
+}
+
+.nav-links li a {
+  font-family: 'Lato', sans-serif;
+  color: var(--text-color);
+  font-weight: 400;
+  padding: 0.5rem 1rem; /* Add padding to links */
+  border-radius: 5px; /* Rounded corners for links */
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active { /* 'active' class for react-scroll */
+  color: var(--accent-color);
+  background-color: rgba(255, 140, 66, 0.1); /* Subtle background on hover/active */
+}
+
+.nav-link-button {
+  background: none;
+  border: none;
+  padding: 0.5rem 1rem; /* Match link padding */
+  border-radius: 5px;
+  font-family: 'Lato', sans-serif;
+  font-size: 1rem; /* Match link font size */
+  font-weight: 400; /* Match link font weight */
+  color: var(--text-color); /* Match link color */
+  cursor: pointer;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  display: inline-block; /* Ensure it behaves like a link */
+  line-height: normal; /* Reset line-height for consistency */
+  text-align: left; /* Align text left */
+}
+
+.nav-link-button:hover {
+  color: var(--accent-color);
+  background-color: rgba(255, 140, 66, 0.1);
+}
+
+.theme-toggle {
+  /* Styling for the theme toggle will go here */
+  margin-left: 1rem;
+}

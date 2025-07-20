@@ -1,0 +1,64 @@
+Product Requirements Document: Interactive HR Dashboard
+Version: 4.0 (Final)
+Date: July 19, 2025
+========================================================
+
+1. Introduction
+---------------
+This document outlines the requirements for the "Interactive HR Dashboard." The goal is to create a professional, high-quality data tool that consolidates data from various sources (HRIS, ATS, etc.) into a single source of truth, enabling HR professionals to move from manual reporting to making strategic, data-driven decisions.
+
+2. Goals & Objectives
+-------------------
+* Primary Goal: To effectively present a holistic view of the workforce's health, allowing leaders to identify trends, pinpoint pain points, and plan for the future.
+* Success Metrics:
+    - Adoption Rate: >80% of the target HR users log in at least once per week.
+    - Efficiency Gain: A measured >50% reduction in time spent by the HR team manually compiling reports.
+    - User Satisfaction: A user-reported satisfaction score of at least 4 out of 5.
+    - Data-Driven Decisions: At least three documented strategic decisions made in the first quarter post-launch, directly citing data from the dashboard.
+
+3. Target Audience
+-----------------
+* Primary User: The HR Director or CHRO.
+* Secondary User: The HR Business Partner (HRBP) or HR Manager.
+* Tertiary User: The Data Analyst.
+
+4. Product Features & Requirements
+----------------------------------
+
+4.1. Core Dashboard & Analytics
+* Narrative Insights (Executive Summary): A landing page that uses Natural Language Generation (NLG) to provide a plain-English summary of the most critical findings from across the dashboard.
+* Global Filter Bar: Allows users to filter all dashboard data by Date Range, Department, and Location.
+* KPI Banners: A row of prominent numbers displaying key metrics: Total Headcount, Quarterly Turnover Rate, Average Employee Tenure, Time to Hire, Offer Acceptance Rate, and Employee Engagement Score.
+* Headcount Trend Chart: A line chart showing employee count over time.
+* Turnover Analysis Chart: A bar chart breaking down turnover into "Voluntary" vs. "Involuntary."
+* Diversity & Inclusion Donut Charts: Interactive charts for Gender, Ethnicity, and Age Bracket. Supports cross-filtering and "drill-through" to detailed views.
+* Data Export: An "Export to CSV" option on all relevant charts and tables.
+
+4.2. Strategic & Predictive Modules
+* Compensation Equity Dashboard: A view to compare salaries by Job Role, Gender, and Ethnicity to identify pay gaps.
+* Predictive Attrition Risk Module:
+    - Uses a machine learning model to calculate an "attrition risk score" for each employee.
+    - Integrates with other modules to display context flags (e.g., a '$' flag if the employee is also a compensation outlier).
+    - Allows HRBPs to initiate a "Retention Plan" directly from the module.
+
+5. Data Management & Governance (Admin-Only)
+--------------------------------------------
+* Data Quality & Validation Dashboard: Automatically scans incoming data, reports on its health with a "Data Health Score," and provides detailed error logs.
+* Granular Access Control & Audit Logs: Allows creation of custom user roles with specific permissions and maintains an immutable audit log of all data access and user actions.
+* Centralized Data Dictionary & Lineage: A searchable business glossary that defines all metrics and visualizes data lineage from source to dashboard.
+* Historical Data Integrity Module: A tool to manage organizational changes (e.g., department re-orgs) to ensure historical data trends remain accurate.
+* User Onboarding & Help: Features an interactive product tour for first-time users and in-app metric definitions.
+
+6. Non-Functional Requirements
+------------------------------
+* Performance: The dashboard must load in under 3 seconds. Filters must apply in under 500ms.
+* Security: Role-Based Access Control (RBAC) must be implemented.
+* Data Accuracy: Data will be refreshed on a nightly basis from a source of truth.
+* Responsiveness: Primarily designed for desktop but must be usable on tablets.
+
+7. Out of Scope (for Version 1.0)
+-----------------------------------
+* Skill Gap Analysis Module: Requires a comprehensive skills database not available for V1.
+* Full NLP Sentiment Analysis: The initial version will track quantitative engagement scores, not qualitative text analysis.
+* Real-time, up-to-the-second data streaming.
+* Fully user-customizable dashboard layouts.
